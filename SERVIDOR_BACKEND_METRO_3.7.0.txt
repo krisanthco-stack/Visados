@@ -1,0 +1,25 @@
+C-VISADOS 3.7.0 — BACKEND DE LECTURA METRO
+
+Archivo: server/server.cjs
+Requisito: Node.js 20+ con `fetch` nativo.
+Dependencias externas: ninguna.
+Puerto por defecto: 8787 (puede cambiarse con la variable de entorno PORT).
+
+Endpoints:
+- GET /api/health
+- GET /api/metro/read?url=https%3A%2F%2Fmetro.sarapiqui.go.cr%2F...
+
+Seguridad:
+- Solo se aceptan URLs HTTPS cuyo hostname sea exactamente metro.sarapiqui.go.cr.
+- Redirecciones fuera de ese host son rechazadas.
+- El contenido HTML se convierte a texto; script/style/noscript no se entregan al cliente.
+- Tiempo máximo de lectura remota: 15 segundos.
+- El endpoint JSON permite GET/OPTIONS con CORS para poder utilizar un backend HTTPS separado de una PWA estática.
+
+Configuración del frontend:
+- Mismo origen: deje `window.CVISADOS_BACKEND_URL=''` en js/config.js.
+- Backend separado: establezca ahí la URL HTTPS base del backend.
+- También puede establecer temporalmente `localStorage.cvisados_backend_url`; la configuración de `js/config.js` tiene prioridad.
+
+Fallback:
+El panel intenta mostrar el sitio en iframe y, en paralelo, consulta el backend. Si el iframe está bloqueado, la lectura backend puede seguir completando los campos del expediente. Si el backend tampoco está disponible, la interfaz no se detiene y mantiene el vínculo/lector de archivos local.

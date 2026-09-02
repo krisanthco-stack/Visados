@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123a5c">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="C-VISADOS">
+<meta name="application-name" content="C-VISADOS">
+<meta name="description" content="Control municipal de expedientes de visado de la Municipalidad de Sarapiquí">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./assets/icon-192.png">
+<link rel="icon" href="./assets/icon-192.png" type="image/png">
+<script>
+window.__CV_INSTALL_PROMPT__=null;
+window.__CV_INSTALL_PROMPT_TIME__=0;
+window.addEventListener('beforeinstallprompt',function(e){
+  e.preventDefault();
+  window.__CV_INSTALL_PROMPT__=e;
+  window.__CV_INSTALL_PROMPT_TIME__=Date.now();
+  window.dispatchEvent(new Event('cv-install-ready'));
+});
+</script>
+<link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+<link rel="apple-touch-icon" href="./assets/icon-192.png">
+<link rel="stylesheet" href="./css/app.css">
+<title>C-VISADOS</title>
+</head>
+<body class="density-compact">
+<div class="top"><div class="brand"><div class="brandmark">CV</div><div><strong>C-VISADOS</strong><small>Municipalidad de Sarapiquí</small></div></div><div class="nav">
+<button class="active" data-page="tramites"><span class="n">1</span>Trámites</button>
+<button data-page="pre"><span class="n">2</span>Precalificación</button>
+<button data-page="inspection"><span class="n">3</span>Inspección</button>
+<button data-page="calificacion"><span class="n">4</span>Calificación</button>
+<button data-page="cierre"><span class="n">5</span>Resoluciones</button>
+<button data-page="gestion"><span class="n">6</span>Gestiones</button>
+<button id="installBtn" class="install">Instalar / verificar</button>
+</div></div>
+<div class="head"><div><h1 id="pageTitle">Módulo de Trámites</h1><small>Registro → precalificación → inspección → calificación → resolución</small></div><div class="small"><b>Catastro y Topografía</b> · Ext. 2029<br>Datos guardados localmente en este equipo</div></div>
+
+<section class="page active" id="page-tramites">
+<div class="notice"><b>Normalización automática:</b> no diferencia mayúsculas/minúsculas ni tildes. Horquetas, Las Horquetas, HORQTS y Horqueta se consolidan como <b>Horquetas</b>; Palmitas, Las Palmitas, PALMIATAS y palmita como <b>Las Palmitas</b>.</div>
+<div id="kpis" class="kpis"></div>
+<div class="card import-card"><div class="toolbar import-toolbar"><div class="import-copy"><h3 style="margin:0">Importar expedientes</h3><div class="small">Excel/CSV, JSON, PDF y ZIP admiten varios trámites para un mismo folio, plano o presentación. El N.° de trámite permanece en blanco hasta que un archivo o el lector de expediente lo reconozca y lo vincule automáticamente.</div></div><div class="right"><button class="btn primary" onclick="fileJson.click()">JSON</button> <button class="btn" onclick="fileExcel.click()">Excel / CSV</button> <button class="btn" onclick="filePdf.click()">PDF</button> <button class="btn" onclick="fileZip.click()">ZIP</button></div></div><input id="fileJson" type="file" accept=".json" hidden multiple><input id="fileExcel" type="file" accept=".xlsx,.csv" hidden multiple><input id="filePdf" type="file" accept=".pdf" hidden multiple><input id="fileZip" type="file" accept=".zip,application/zip" hidden multiple><div id="importMsg" class="small import-msg">Listo para importar.</div></div>
+<details id="tramitesAccordion" class="tramites-accordion" open>
+<summary><span><b>Trámites activos</b><small>Listado y filtros</small></span><span class="tramites-summary"><b id="tramitesSummary">0 visibles</b><small>Mostrar / ocultar</small></span></summary>
+<div class="tramites-accordion-body">
+<div class="card"><div class="toolbar"><div class="field"><label>Buscar</label><input id="fSearch" placeholder="Trámite, folio, presentación, solicitante..."></div><div class="field"><label>Distrito</label><select id="fDistrict"><option value="">Todos</option></select></div><div class="field"><label>Lugar</label><input id="fPlace"></div><div class="field"><label>Alarmas</label><select id="fAlert"><option value="">Todas</option><option value="ALARMAS">Con alarmas</option><option value="SIN_ALARMAS">Sin alarmas</option><option value="VENCIMIENTOS">Vencimientos (≥15 días)</option></select></div><button class="btn" onclick="clearFilters()">Limpiar</button><button class="btn primary" onclick="toggleNew()">+ Nuevo expediente</button><button class="btn" onclick="exportAll()">Exportar respaldo JSON</button></div></div>
+<div id="newCard" class="card" style="display:none"><h3>Registro de expediente</h3><div class="formgrid">
+<div class="field"><label>Folio real</label><input id="nFolio" placeholder="Primero: folio"></div><div class="field"><label>Plano</label><input id="nPlano" placeholder="Luego: plano"></div><div class="field"><label>Presentación</label><input id="nPresent" placeholder="2026-155222-C"></div><div class="field"><label>N.° trámite <span class="small">(se vincula por archivo o lector)</span></label><input id="nTramite" readonly placeholder="Pendiente de vinculación"></div>
+<div class="field"><label>ID / enlace Metro</label><input id="nMetro" placeholder="ID o https://metro.sarapiqui.go.cr/..."></div><div class="field"><label>Fecha de solicitud / ingreso</label><input id="nFecha" type="date"></div><div class="field"><label>Solicitante</label><input id="nSolicitante"></div><div class="field"><label>Correo</label><input id="nCorreo" type="email"></div>
+<div class="field"><label>Área</label><input id="nArea" placeholder="1952.00 m²"></div><div class="field"><label>Distrito</label><input id="nDistrito"></div><div class="field"><label>Lugar</label><input id="nLugar"></div>
+<div class="field"><label>Tipo de ingreso</label><select id="nIngreso"><option>Nuevo ingreso</option><option>Reingreso</option><option>Resello</option></select></div><div class="field"><label>Modalidad</label><select id="nModalidad"><option value="SIMPLE">Fraccionamiento simple</option><option value="URBANISTICO">Fines urbanísticos</option><option value="ACCESO_EXCEPCIONAL">Acceso excepcional residencial</option><option value="AGROPECUARIO">Agrícola / pecuario / forestal / mixto</option></select></div><div class="field"><label>Responsable</label><input id="nResponsable" value="Analista"></div><div class="field span2"><label>Observaciones</label><textarea id="nObservaciones" placeholder="Observaciones generales del expediente"></textarea></div></div><div class="toolbar" style="margin-top:9px"><button class="btn primary" onclick="saveNew()">Guardar</button><button class="btn" onclick="toggleNew()">Cancelar</button></div></div>
+<div class="card"><div class="tablewrap"><table><thead><tr><th>Trámite / referencia</th><th>Fecha solicitud / antigüedad</th><th>Folio / Plano</th><th>Presentación</th><th>Solicitante</th><th>Distrito / Lugar</th><th>Estado</th><th>Resultado</th><th></th></tr></thead><tbody id="expBody"></tbody></table></div></div>
+<div id="readerPanel" class="card reader-panel" style="display:none">
+  <div class="compact-toolbar reader-toolbar"><div><h3 style="margin:0">Visor y lector de expediente</h3><div class="small">Vista dividida con lectura automática. Si Metro bloquea el iframe, se usa el lector backend sin detener la interfaz.</div></div><button class="btn" onclick="closeReader()">Cerrar</button></div>
+  <div class="reader-controls"><div class="field"><label>ID / enlace Metro</label><input id="readerUrl" placeholder="ID o https://metro.sarapiqui.go.cr/..."></div><button class="btn primary" onclick="readerOpenUrl()">Abrir y leer</button><button class="btn" onclick="readerFile.click()">PDF / imagen</button><input id="readerFile" type="file" accept=".pdf,application/pdf,image/*" hidden></div>
+  <div id="readerStatus" class="small reader-status">Seleccione un expediente y una fuente.</div>
+  <div class="reader-split"><div class="reader-data"><h4>Datos reconocidos</h4><div id="readerDetected" class="reader-detected empty">Sin lectura.</div></div><div class="reader-view"><iframe id="readerFrame" title="Expediente Metro"></iframe><pre id="readerBackendPreview" class="reader-backend-preview">El contenido procesado por backend aparecerá aquí cuando el sitio no permita mostrarse embebido.</pre></div></div>
+</div>
+</div></details>
+<div class="module-next"><button class="btn next-btn" onclick="nextModule('tramites')">Siguiente →</button></div>
+</section>
+
+
+<section class="page" id="page-pre">
+  <div class="card compact-card">
+    <div class="compact-toolbar">
+      <div class="field"><label>Expediente</label><select id="preExp"></select></div>
+      <div class="field"><label>Tipo de ingreso</label><select id="preIngreso"><option>Nuevo ingreso</option><option>Reingreso</option><option>Resello</option></select></div>
+      <div class="field"><label>Modalidad</label><select id="preModalidad"><option value="SIMPLE">Fraccionamiento simple</option><option value="URBANISTICO">Fines urbanísticos</option><option value="ACCESO_EXCEPCIONAL">Acceso excepcional residencial</option><option value="AGROPECUARIO">Agrícola / pecuario / forestal / mixto</option></select></div>
+      <span id="preSummary" class="right pill amber">Pendiente</span>
+    </div>
+  </div>
+  <details class="accordion">
+    <summary>Condiciones que activan requisitos específicos</summary>
+    <div class="accordion-body condition-grid">
+      <label><input type="checkbox" id="condAgua"> Requiere disponibilidad de agua</label>
+      <label><input type="checkbox" id="condMopt"> Frente a Red Vial Nacional</label>
+      <label><input type="checkbox" id="condAreas"> Hay áreas públicas a ceder</label>
+      <label><input type="checkbox" id="condBosque"> Cobertura boscosa</label>
+      <label><input type="checkbox" id="condSinServ"> Sin servicios indispensables</label>
+      <label><input type="checkbox" id="condGrafica"> Corrección gráfica</label>
+      <label><input type="checkbox" id="condResello"> Resello &gt;1 año / otra presentación</label>
+    </div>
+  </details>
+  <div id="reqList"></div>
+  <div class="card compact-card">
+    <div class="compact-toolbar"><h3 style="margin:0">Incumplimientos para Calificación</h3><span id="preFailureCount" class="right pill green">0</span></div>
+    <div id="preFailures" class="pre-failures small">Sin incumplimientos obligatorios.</div>
+  </div>
+  <div class="module-next"><button class="btn next-btn" onclick="nextModule('pre')">Siguiente →</button></div>
+</section>
+
+<section class="page" id="page-inspection">
+  <div class="card compact-card">
+    <div class="compact-toolbar">
+      <div class="field"><label>Expediente</label><select id="inspectionExp"></select></div>
+      <span id="inspectionSummary" class="pill amber">PENDIENTE</span>
+      <div class="right">
+        <button class="btn primary" onclick="addAccess()">+ Agregar acceso</button>
+        <button class="btn" id="toggleLCBtn" onclick="toggleLCView()">Ver datos desde L.C.</button>
+      </div>
+    </div>
+  </div>
+  <div id="accessList" class="access-list"></div>
+  <div class="card compact-card">
+    <div class="field"><label>Observaciones de inspección</label><textarea id="inspectionObs" placeholder="Observaciones de campo"></textarea></div>
+    <div class="compact-toolbar" style="margin-top:7px"><button class="btn primary" onclick="saveInspection()">Guardar inspección</button><span id="inspectionOverall" class="small"></span></div>
+  </div>
+  <div class="module-next"><button class="btn next-btn" onclick="nextModule('inspection')">Siguiente →</button></div>
+</section>
+
+<section class="page" id="page-calificacion">
+  <div class="card compact-card">
+    <div class="cal-top">
+      <div class="field"><label>Expediente</label><select id="motorExp"></select></div>
+      <div class="field"><label>Alarmas</label><select id="calAlert"><option value="">Todas</option><option value="ALARMAS">Con alarmas</option><option value="SIN_ALARMAS">Sin alarmas</option><option value="VENCIMIENTOS">Vencimientos (≥15 días)</option></select></div>
+      <div class="field"><label>Encargado de Calificación</label><input id="calificador" placeholder="Nombre del encargado"></div>
+      <div class="cal-action"><button class="btn primary" onclick="toggleManualPanel()">+ Crear motivo de rechazo</button></div>
+    </div>
+    <div class="flow-summary" id="flowSummary" style="margin-top:8px"></div>
+    <div id="decisionBox" class="statusbox amber">PENDIENTE</div>
+    <div id="manualPanel" class="manual-panel">
+      <div class="formgrid" style="grid-template-columns:repeat(3,minmax(170px,1fr))">
+        <div class="field"><label>Observación</label><textarea id="manualDetalle" placeholder="Observación que se incluirá en la minuta de rechazo"></textarea></div>
+        <div class="field"><label>Motivación técnica</label><textarea id="manualMotivacion"></textarea></div>
+        <div class="field"><label>Fundamento jurídico</label><textarea id="manualFundamento"></textarea></div>
+      </div>
+      <div class="compact-toolbar" style="margin-top:6px"><button class="btn primary" onclick="addManualReject()">Guardar detalle</button><button class="btn" onclick="toggleManualPanel(false)">Cancelar</button></div>
+    </div>
+  </div>
+  <div class="grid2">
+    <div>
+      <div class="card compact-card"><div class="compact-toolbar"><div class="field"><label>Buscar causal</label><input id="defSearch" placeholder="Código, equivalente, descripción o término similar"></div><div class="field"><label>Categoría</label><select id="defCat"><option value="">Todas</option></select></div></div></div>
+      <div class="card compact-card"><div id="catalog" class="catalog"></div></div>
+    </div>
+    <div>
+      <div class="card compact-card"><h3>Incumplimientos heredados</h3><div id="inheritedRejects" class="inherited-list small">Sin incumplimientos.</div></div>
+      <div class="card compact-card"><h3>Detalles de rechazo agregados</h3><div id="manualRejectList" class="manual-list small">Ninguno.</div></div>
+      <div class="card compact-card"><h3>Detalle de la causal</h3><div id="defDetail" class="detail" style="min-height:150px">Seleccione una causal para consultar su detalle y fundamento.</div></div>
+      <div class="card compact-card"><div class="compact-toolbar"><h3 style="margin:0">Motivos seleccionados</h3><span id="selectedCount" class="right pill green">0</span></div><div id="selectedDefs" class="small">Sin causales seleccionadas.</div><button class="btn primary" style="margin-top:8px" onclick="saveQualification()">Guardar, finalizar y enviar a Resoluciones</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="page-cierre">
+  <div class="grid2">
+    <div>
+      <div class="card"><div class="field"><label>Expediente</label><select id="closeExp"></select></div></div>
+      <div class="card"><h3>Datos variables del oficio</h3><div class="formgrid" style="grid-template-columns:repeat(3,minmax(120px,1fr))">
+        <div class="field"><label>Fecha del oficio</label><input id="rFecha" type="date"></div>
+        <div class="field"><label>Tomo <span class="small">(derivado)</span></label><input id="rTomo" readonly></div>
+        <div class="field"><label>Asiento <span class="small">(derivado)</span></label><input id="rAsiento" readonly></div>
+        <div class="field"><label>Área</label><input id="rArea"></div><div class="field"><label>Folio real</label><input id="rFolio"></div><div class="field"><label>Distrito</label><input id="rDistrito"></div>
+        <div class="field"><label>Solicitante</label><input id="rSolicitante"></div><div class="field"><label>Funcionario / topógrafo</label><input id="rFuncionario" value="Kristian Anthony Castillo Oviedo"></div><div class="field"><label>Puesto</label><input id="rPuesto" value="Topógrafo · Departamento de Catastro y Topografía"></div>
+      </div><div class="toolbar" style="margin-top:9px"><button class="btn primary" onclick="saveReportFields()">Actualizar oficio</button><button class="btn success" id="finalBtn" onclick="finalizeCase()">Concluir resolución y enviar a Gestión</button><button class="btn danger" id="reopenBtn" onclick="reopenCase()">Reabrir</button></div></div>
+      <div class="card"><div class="toolbar"><h3 style="margin:0">Salida</h3><span id="closeStatus" class="right pill green"></span></div><div class="toolbar office-actions">
+        <button class="btn primary" onclick="printReport()">Imprimir / Guardar PDF</button>
+        <button class="btn" onclick="downloadOfficeWord()">Word (.docx)</button>
+        <button class="btn" onclick="downloadOfficePdf(false)">PDF (.pdf)</button>
+        <button class="btn" onclick="downloadOfficePdf(true)">PDF editable (.pdf)</button>
+        <button class="btn" onclick="downloadCase()">Descargar expediente JSON</button>
+      </div></div>
+    </div>
+    <div><div class="preview"><iframe id="reportFrame" title="Vista previa del oficio oficial"></iframe></div><div class="report-note">Vista previa basada en los machotes oficiales cargados por el usuario. Se conservan la plantilla base y el diseño original.</div></div>
+  </div>
+  <div class="module-next"><button class="btn next-btn" onclick="nextModule('cierre')">Siguiente →</button></div>
+</section>
+
+<section class="page" id="page-gestion">
+  <div class="card compact-card">
+    <div class="compact-toolbar"><h3 style="margin:0">Gestión global de trámites</h3><span id="gestionSummary" class="right pill blue">0 trámites</span></div>
+    <div class="daily-strip"><div class="field"><label>Gestión por día</label><input id="gDay" type="date"></div><span id="gDayCreated" class="pill blue">Creados: 0</span><span id="gDayManaged" class="pill blue">Gestionados: 0</span><span id="gDayApproved" class="pill green">Aprobados: 0</span><span id="gDayRejected" class="pill red">Rechazados: 0</span><button class="btn primary" onclick="exportDailyGestionExcel()">Excel del día</button><button class="btn" onclick="downloadDailyDocumentsZip()">ZIP documentos del día</button></div>
+    <div class="gestion-filters">
+      <div class="field"><label>Buscar</label><input id="gSearch" placeholder="Trámite, folio, presentación, solicitante..."></div>
+      <div class="field"><label>Estado</label><select id="gEstado"><option value="">Todos</option></select></div>
+      <div class="field"><label>Resultado</label><select id="gResultado"><option value="">Todos</option><option>APROBADO</option><option>RECHAZADO</option></select></div>
+      <div class="field"><label>Distrito</label><select id="gDistrito"><option value="">Todos</option></select></div>
+      <button class="btn" onclick="clearGestionFilters()">Limpiar</button>
+      <button class="btn primary" onclick="exportGestionExcel()">Descargar Excel (.xlsx)</button>
+      <button class="btn" onclick="exportAll()">Exportar JSON (.json)</button>
+    </div>
+  </div>
+  <div class="card compact-card"><div class="tablewrap"><table class="gestion-table"><thead><tr><th>Trámite</th><th>Fecha / alerta</th><th>Folio</th><th>Presentación</th><th>Solicitante</th><th>Distrito / lugar</th><th>Estado</th><th>Resultado</th><th>Observaciones</th></tr></thead><tbody id="gestionBody"></tbody></table></div></div>
+  <div class="card compact-card gestion-review-card" id="gestionReview">
+    <div class="compact-toolbar"><div><h3 style="margin:0">Subsanación / corrección e histórico</h3><div class="small">Disponible para trámites que ya finalizaron Calificación y pasaron a Resoluciones/Gestión.</div></div><span id="gestionSelected" class="right pill blue">Seleccione un trámite</span></div>
+    <div id="gestionReviewBody" class="gestion-review-body"><div class="empty">Seleccione un trámite aprobado o rechazado.</div></div>
+  </div>
+  <div class="module-next gestion-next"><span class="small">Gestión conserva el histórico desde la primera calificación hasta la última revisión.</span><button class="btn next-btn" onclick="nextModule('gestion')">Volver a Trámites →</button></div>
+</section>
+<script src="./js/pwa.js"></script>
+<script src="./js/data.js"></script>
+<script src="./js/intake.js"></script>
+<script src="./js/config.js"></script>
+<script src="./js/daily.js"></script>
+<script src="./js/attachments.js"></script>
+<script src="./js/reader.js"></script>
+<script src="./js/workflow.js"></script>
+<script src="./js/app.js"></script>
+<script src="./js/report-layout.js"></script>
+<script src="./js/exporters.js"></script>
+</body>
+</html>

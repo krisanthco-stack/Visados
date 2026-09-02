@@ -1,0 +1,224 @@
+{
+  "GENERAL_NUEVO": [
+    {
+      "id": "RG01",
+      "req": "Solicitud de Visado Municipal debidamente completada.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria"
+    },
+    {
+      "id": "RG02",
+      "req": "Minuta para visado, sin defectos de traslape.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria"
+    },
+    {
+      "id": "RG03",
+      "req": "Imagen de la minuta correspondiente a la presentación.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria"
+    },
+    {
+      "id": "RG04",
+      "req": "Informe o consulta registrales de la finca madre.",
+      "nivel": "OPCIONAL",
+      "fund": "Opcional"
+    },
+    {
+      "id": "RG05",
+      "req": "Archivo digital georreferenciado correspondiente al plano, en CR-SIRGAS-CRTM05. Formato municipal: DWG, DXF o SHP.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RGRI art. 87 / Gestión municipal obligatoria",
+      "tag": "CRTM05"
+    },
+    {
+      "id": "RG06",
+      "req": "Plano catastrado certificado de la finca madre o certificado catastral; en reunión de predios, indicar el plano que genera la reunión.",
+      "nivel": "OPCIONAL",
+      "fund": "Opcional / RFU art. 18.1 / RFU art. 27.1"
+    },
+    {
+      "id": "RG07",
+      "req": "Plano o croquis georreferenciado del conjunto del fraccionamiento, firmado por profesional responsable miembro activo del CIT; debe mostrar lotes, frente/fondo, acceso excepcional y resto de finca madre cuando corresponda.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 27.3",
+      "tag": "CRTM05"
+    },
+    {
+      "id": "RG08",
+      "req": "Disponibilidad del servicio para abastecimiento de agua, indicando plano catastrado y número de presentación.",
+      "nivel": "OBLIGATORIO CUANDO APLIQUE",
+      "fund": "RFU art. 13 / 18.4 / 22.6 / 27.5",
+      "cond": "agua"
+    },
+    {
+      "id": "RG09",
+      "req": "Alineamiento del MOPT cuando la propiedad se encuentre frente a una ruta de la Red Vial Nacional.",
+      "nivel": "OBLIGATORIO CUANDO APLIQUE",
+      "fund": "Gestión municipal obligatoria",
+      "cond": "mopt"
+    },
+    {
+      "id": "RG10",
+      "req": "Contribuyente al día con las obligaciones tributarias municipales.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Condición general del trámite"
+    }
+  ],
+  "SIMPLE": [
+    {
+      "id": "FS01",
+      "req": "Planos individuales de agrimensura de cada lote resultante, georreferenciados al sistema oficial vigente y firmados por profesional responsable miembro activo del CIT.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 18.3",
+      "tag": "CRTM05"
+    }
+  ],
+  "URBANISTICO": [
+    {
+      "id": "FU01",
+      "req": "Visado previo del INVU, salvo la excepción prevista para fraccionamientos que requieren únicamente visado municipal.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 22 / art. 21 bis",
+      "tag": "VISADO"
+    },
+    {
+      "id": "FU02",
+      "req": "Certificado de uso de suelo emitido por la Municipalidad, con plano catastrado, uso, retiros, cobertura, densidad, altura, frente, área mínima y vigencia; si hay dos o más zonas, aportar delimitación.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 22.2"
+    },
+    {
+      "id": "FU03",
+      "req": "Planos individuales de agrimensura de cada lote resultante, georreferenciados al sistema oficial vigente y firmados por profesional responsable miembro activo del CIT.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 22.4",
+      "tag": "CRTM05"
+    },
+    {
+      "id": "FU04",
+      "req": "Planos individuales de agrimensura de las áreas públicas a ceder a la Municipalidad, incluido equipamiento de juegos infantiles.",
+      "nivel": "OBLIGATORIO CUANDO APLIQUE",
+      "fund": "RFU art. 22.5",
+      "cond": "areas_publicas"
+    }
+  ],
+  "ACCESO_EXCEPCIONAL": [
+    {
+      "id": "AE01",
+      "req": "Visado previo emitido por el INVU.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 27",
+      "tag": "VISADO"
+    },
+    {
+      "id": "AE02",
+      "req": "Certificado de uso de suelo.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 27.2"
+    },
+    {
+      "id": "AE03",
+      "req": "Planos individuales de agrimensura de cada lote resultante, georreferenciados al sistema oficial vigente y firmados por profesional responsable miembro activo del CIT; el área del acceso excepcional debe estar contenida en los lotes resultantes.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 27.4",
+      "tag": "CRTM05"
+    }
+  ],
+  "AGROPECUARIO": [
+    {
+      "id": "AG01",
+      "req": "Certificado de uso de suelo.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 36.2"
+    },
+    {
+      "id": "AG02",
+      "req": "Planos individuales de agrimensura de cada parcela resultante, georreferenciados al sistema oficial vigente y firmados por profesional responsable miembro activo del CIT.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 36.4",
+      "tag": "CRTM05"
+    },
+    {
+      "id": "AG03",
+      "req": "Para predios con frente directo a calle pública destinados a actividad agrícola, pecuaria, forestal o mixta: área mínima de 900,00 m² e indicación en planos de uso exclusivo para dicha actividad.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 31"
+    },
+    {
+      "id": "AG04",
+      "req": "Área mínima de 5 000,00 m² por parcela cuando el acceso sea mediante servidumbre agrícola, pecuaria, forestal o mixta.",
+      "nivel": "OBLIGATORIO",
+      "fund": "RFU art. 30"
+    },
+    {
+      "id": "AG05",
+      "req": "Área mínima de 20 000 m² cuando la parcela tenga cobertura boscosa.",
+      "nivel": "OBLIGATORIO CUANDO APLIQUE",
+      "fund": "RFU art. 34",
+      "cond": "bosque"
+    },
+    {
+      "id": "AG06",
+      "req": "Cuando no exista disponibilidad de servicios indispensables, incorporar en los planos la nota exigida por el RFU para el otorgamiento posterior del permiso de construcción.",
+      "nivel": "OBLIGATORIO CUANDO APLIQUE",
+      "fund": "RFU art. 13",
+      "cond": "sin_servicios"
+    }
+  ],
+  "REINGRESO": [
+    {
+      "id": "RE01",
+      "req": "Minuta de rechazo o prevención correspondiente.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria"
+    },
+    {
+      "id": "RE02",
+      "req": "Plano, croquis o archivo digital corregido cuando la prevención o rechazo recaiga sobre información gráfica.",
+      "nivel": "OBLIGATORIO CUANDO APLIQUE",
+      "fund": "Gestión municipal obligatoria",
+      "cond": "correccion_grafica"
+    },
+    {
+      "id": "RE03",
+      "req": "Documentos faltantes o subsanados indicados en la prevención o rechazo.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria"
+    }
+  ],
+  "RESELLO": [
+    {
+      "id": "RS01",
+      "req": "Minuta correspondiente al trámite previamente visado.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria"
+    },
+    {
+      "id": "RS02",
+      "req": "Imagen de la minuta.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria"
+    },
+    {
+      "id": "RS03",
+      "req": "Oficio del visado anterior.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria",
+      "tag": "VISADO"
+    },
+    {
+      "id": "RS04",
+      "req": "Disponibilidad de recurso hídrico cuando el trámite previo tenga más de un año o presente otro número de presentación.",
+      "nivel": "OBLIGATORIO CUANDO APLIQUE",
+      "fund": "Condición de resello",
+      "cond": "recurso_hidrico_resello"
+    },
+    {
+      "id": "RS05",
+      "req": "Identificación expresa del tipo de ingreso como “Resello”.",
+      "nivel": "OBLIGATORIO",
+      "fund": "Gestión municipal obligatoria"
+    }
+  ]
+}
