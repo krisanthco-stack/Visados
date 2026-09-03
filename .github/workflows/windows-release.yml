@@ -1,0 +1,49 @@
+name: C-VISADOS 4 Windows Installer
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v4.*'
+
+permissions:
+  contents: write
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Instalar dependencias
+        run: npm install --no-audit --no-fund
+
+      - name: Configurar canal de actualización con este repositorio
+        run: node scripts/stamp-github-repo.cjs
+
+      - name: Verificar C-VISADOS 4
+        run: npm test
+
+      - name: Generar instalador gráfico de Windows sin publicación automática
+        run: npm run dist:win
+
+      - name: Guardar instalador como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: C-VISADOS-4-Windows-${{ github.ref_name }}
+          path: dist/*.exe
+          if-no-files-found: error
+
+      - name: Publicar instalador en GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v4.')
+        uses: softprops/action-gh-release@v2
+        with:
+          token: ${{ github.token }}
+          files: dist/*.exe
+          generate_release_notes: true
