@@ -1,0 +1,67 @@
+{
+  "name": "c-visados",
+  "version": "4.0.0",
+  "description": "C-VISADOS 4 - Control municipal de expedientes de visado - Municipalidad de Sarapiquí",
+  "main": "desktop/main.cjs",
+  "author": "Municipalidad de Sarapiquí",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node scripts/run-tests.cjs",
+    "dist:win": "electron-builder --win nsis --x64 --publish never"
+  },
+  "devDependencies": {
+    "electron": "44.0.0",
+    "electron-builder": "26.15.3"
+  },
+  "build": {
+    "appId": "cr.go.sarapiqui.cvisados",
+    "productName": "C-VISADOS",
+    "asar": false,
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "css/**/*",
+      "js/**/*",
+      "data/**/*",
+      "assets/**/*",
+      "server/**/*",
+      "desktop/**/*",
+      "VERSION.txt",
+      "manifest.webmanifest",
+      "sw.js",
+      "node_modules/pdfjs-dist/**/*",
+      "node_modules/tesseract.js/**/*"
+    ],
+    "win": {
+      "icon": "assets/icon-512.png",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "C-VISADOS",
+      "artifactName": "C-VISADOS-Setup-${version}-${arch}.${ext}",
+      "uninstallDisplayName": "C-VISADOS ${version}",
+      "deleteAppDataOnUninstall": false
+    },
+    "artifactName": "C-VISADOS-Setup-${version}-${arch}.${ext}"
+  },
+  "dependencies": {
+    "pdfjs-dist": "3.11.174",
+    "tesseract.js": "5.1.1"
+  }
+}

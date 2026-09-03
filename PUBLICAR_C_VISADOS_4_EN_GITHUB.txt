@@ -1,0 +1,28 @@
+PUBLICAR C-VISADOS 4.0.0 EN GITHUB - SIN CMD
+=============================================
+
+1. Abra el repositorio PUBLICO de C-VISADOS en GitHub.
+2. Sustituya los archivos de la versión anterior por el contenido de este paquete.
+3. Verifique que VERSION.txt diga: 4.0.0
+4. Si la carpeta .github no se puede subir por estar oculta:
+   - GitHub > Add file > Create new file
+   - Nombre exacto: .github/workflows/windows-release.yml
+   - Copie el contenido del archivo incluido en este paquete.
+5. Haga Commit changes en la rama main.
+6. Entre a Actions > C-VISADOS 4 Windows Installer.
+7. Para una prueba sin publicar Release: Run workflow. Al terminar, el EXE queda en Artifacts.
+8. Para publicar oficialmente:
+   - Releases > Draft a new release
+   - Tag: v4.0.0
+   - Target: main
+   - Título: C-VISADOS 4.0.0
+   - Publish release.
+9. GitHub Actions compila automáticamente y adjunta:
+   C-VISADOS-Setup-4.0.0-x64.exe
+
+IMPORTANTE
+- No crear GH_TOKEN.
+- No crear Personal Access Token.
+- No usar CMD ni PowerShell.
+- El comando interno electron-builder usa --publish never; solo GitHub Actions publica el EXE.
+- Las versiones instaladas que usen el mismo repositorio público podrán detectar 4.0.0 desde el actualizador de C-VISADOS.

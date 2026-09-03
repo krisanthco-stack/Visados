@@ -1,0 +1,13 @@
+AUDITORIA C-VISADOS 4.0.0
+========================
+- Suite completa: 100 pruebas, 0 fallos.
+- Sintaxis JavaScript/CJS: correcta.
+- IDs HTML duplicados: 0.
+- Recursos oficiales de assets/templates comparados con 3.8.1: 10 archivos, 0 cambios SHA-256.
+- Trámites/Precalificación/Inspección/Calificación: pruebas existentes conservadas.
+- Resoluciones/Gestión/subsanación: pruebas existentes conservadas.
+- Metro ID/URL, scraper y lector PDF/OCR: pruebas existentes conservadas.
+- GitHub Installer: protegido contra publicación automática de electron-builder y contra dependencia de GH_TOKEN.
+- Workflow: usa github.token automático y no solicita cache npm sin lockfile.
+- PDF de aprobación y rechazo: MediaBox Carta 612 x 792 puntos.
+- Word generado: pgSz Carta 12240 x 15840 twips; márgenes laterales 720 twips (1.27 cm).

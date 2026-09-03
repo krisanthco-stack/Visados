@@ -1,0 +1,41 @@
+C-VISADOS 3.7.0 — INSTALACIÓN EN GITHUB PAGES
+
+MODO PWA ESTÁTICO
+1. Descomprima el ZIP.
+2. Suba TODO el contenido directamente a la raíz del repositorio GitHub.
+3. En GitHub: Settings > Pages.
+4. Source: Deploy from a branch.
+5. Branch: main.
+6. Folder: / (root).
+7. Espere la publicación y abra la URL HTTPS.
+8. Si continúa cargándose una PWA anterior, use en C-VISADOS: Instalar / verificar > Reparar y recargar.
+
+La raíz debe contener directamente:
+index.html
+manifest.webmanifest
+sw.js
+.nojekyll
+css/
+js/
+data/
+assets/
+server/
+
+No subir el ZIP como único archivo ni crear una carpeta adicional alrededor del contenido.
+
+LECTOR METRO / FALLBACK BACKEND
+- La PWA estática conserva todos los módulos locales, importación de archivos, OCR disponible en navegador y el enlace/visor integrado.
+- Si metro.sarapiqui.go.cr bloquea el iframe mediante X-Frame-Options/CSP, el lector intenta el fallback backend sin detener la interfaz.
+- GitHub Pages no ejecuta Node.js. Para que el fallback de scraping web funcione, despliegue `server/server.cjs` en un servidor Node.js 20+ o superior.
+- Si frontend y backend se sirven desde el mismo origen, no es necesario configurar nada.
+- Si el backend está en otro origen HTTPS, edite `js/config.js` y asigne, por ejemplo:
+  window.CVISADOS_BACKEND_URL='https://backend.ejemplo.go.cr';
+- El backend solo permite scraping HTTPS del host exacto `metro.sarapiqui.go.cr`.
+
+EJECUCIÓN LOCAL CON BACKEND
+1. Instale Node.js 20 o superior.
+2. Desde la raíz del proyecto ejecute: node server/server.cjs
+3. Abra: http://localhost:8787
+4. Verificación de salud: http://localhost:8787/api/health
+
+No se requieren paquetes npm adicionales para el servidor incluido.

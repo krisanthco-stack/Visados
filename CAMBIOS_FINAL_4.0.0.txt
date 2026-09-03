@@ -1,0 +1,23 @@
+C-VISADOS 4.0.0
+================
+Base: C-VISADOS 3.8.1 funcional con lector PDF/OCR, Metro y Desktop.
+
+CAMBIOS DE ESTA VERSION MAYOR
+1. Línea de versión consolidada como C-VISADOS 4.0.0 (no parche 3.8.x).
+2. Resoluciones: controles y datos en franja superior horizontal; vista previa oficial a todo el ancho debajo.
+3. Oficios de APROBACION y RECHAZO: salida PDF/PDF editable en hoja Carta 8.5 x 11 pulgadas.
+4. Word generado: se fuerza hoja Carta, con márgenes laterales simétricos de 0.5 pulgadas (1.27 cm), sin modificar los machotes fuente.
+5. Fecha y trámite: el texto se ajusta automáticamente y termina en el mismo borde derecho de referencia de las tablas, evitando salir del margen.
+6. Descargas de oficio: cuando existe N. de trámite real, PDF/Word/PDF editable usan ese número como nombre, sin sufijos APROBADO/RECHAZADO.
+7. ZIP diario: cada oficio se guarda como oficios/NUMERO-DE-TRAMITE.pdf.
+8. Flujo administrativo conservado: solo Resoluciones concluidas pasan a Gestión; rechazo mantiene subsanación e histórico.
+9. Instalador GitHub corregido: electron-builder siempre compila con --publish never.
+10. Publicación GitHub: solo GitHub Actions adjunta el EXE a Releases mediante github.token; no se requiere GH_TOKEN ni Personal Access Token.
+11. Se eliminó cache:npm del workflow porque no existe package-lock.json; evita una segunda causa de fallo en setup-node.
+12. No se modificaron los 10 recursos oficiales protegidos de los machotes.
+
+TAG DE PUBLICACION RECOMENDADO
+v4.0.0
+
+INSTALADOR ESPERADO
+C-VISADOS-Setup-4.0.0-x64.exe

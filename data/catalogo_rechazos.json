@@ -1,0 +1,871 @@
+[
+  {
+    "codigo": "S.I.C.P",
+    "codigo_maestro": "S.I.C.P",
+    "descripcion": "La servidumbre debe estar representada gráficamente, ya sea de forma parcial o total, dentro del cuerpo del plano",
+    "fundamento_legal": "43",
+    "codigo_equivalente": "S.I.C.P",
+    "categoria": "Servidumbres",
+    "fila_origen": 5,
+    "activo": true,
+    "alertas_fuente": [
+      "Fundamento legal breve; revisar antes de emitir resolución"
+    ],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "S_I_C_P"
+    ],
+    "resumenes_excel": [
+      "Servidumbre sin representación gráfica completa en el plano."
+    ],
+    "descripcion_tecnica_excel": [
+      "La servidumbre deberá representarse gráficamente, de forma total o parcial, dentro del cuerpo del plano de agrimensura."
+    ],
+    "fundamentos_excel": [
+      "Reglamento a la Ley del Catastro Nacional, artículo 34: información que debe incorporarse en el cuerpo del plano de agrimensura."
+    ],
+    "normas_excel": [
+      "Reglamento a la Ley del Catastro Nacional"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "No grafica la servisumbre , dentro delcplano."
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "IV-M7L",
+    "codigo_maestro": "IV-M7L",
+    "descripcion": "Segregación con fines urbanísticos. Se requiere presentar el visado emitido por el INVU",
+    "fundamento_legal": "ARTÍCULO 6. Definiciones.\n49)  Fraccionamiento con fines urbanísticos: Todo aquel fraccionamiento realizado frente a calle pública existente, ubicado fuera de un cuadrante urbano o de un área previamente urbanizada. Todos aquellos fraccionamientos que consten de 8 lotes o más, y cuya sumatoria de área sea igual o mayor a los 900m², serán visados por el INVU y la municipalidad, en ese orden respectiva- mente.  Aquellos fraccionamientos inferiores a 8 lotes serán visados únicamente por la Municipalidad correspondiente. Las áreas mínimas de los lotes deberán respetar lo señalado en el artículo 20 de este reglamento.",
+    "codigo_equivalente": "IV-M7L",
+    "categoria": "Fraccionamiento urbanístico",
+    "fila_origen": 6,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "IV_M7L"
+    ],
+    "resumenes_excel": [
+      "Falta el visado del INVU para la segregación con fines urbanísticos."
+    ],
+    "descripcion_tecnica_excel": [
+      "Por tratarse de una segregación con fines urbanísticos, deberá aportarse el visado emitido por el Instituto Nacional de Vivienda y Urbanismo (INVU)."
+    ],
+    "fundamentos_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones (RFU), artículo 6, definición 49, y disposiciones aplicables al visado de fraccionamientos con fines urbanísticos."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "aliases_busqueda": [
+      "visado invu",
+      "invu"
+    ],
+    "observaciones_excel": [
+      "Aportar visado del INVU._ Segregacion con fines urbanisticos"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "DRH",
+    "codigo_maestro": "DRH",
+    "descripcion": "Se debe aportar el certificado de disponibilidad de recurso hídrico. Esta nota es obligatoria en planos con área mayor a 900 m²",
+    "fundamento_legal": "art.13 RFU",
+    "codigo_equivalente": "DRH",
+    "categoria": "Recurso hídrico",
+    "fila_origen": 7,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "DRH"
+    ],
+    "resumenes_excel": [
+      "Falta el certificado de disponibilidad hídrica para un área mayor de 900 m²."
+    ],
+    "descripcion_tecnica_excel": [
+      "Deberá aportarse el certificado de disponibilidad del recurso hídrico. Este requisito es obligatorio para los planos cuya área sea mayor de 900 m²."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 13, relativo a la disponibilidad y garantía de los servicios requeridos para el fraccionamiento."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "Aportar disponibilidad de agua, o indicar nota según articulo 13."
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "MAS DEL 10%",
+    "codigo_maestro": "MAS DEL 10%",
+    "descripcion": "El área del terreno excede el 10% permitido de la medida original inscrita",
+    "fundamento_legal": "Artículo 22 de la Ley de Catastro Nacional: permite que “la cabida de las fincas pueda ser rectificada … con la sola declaración del propietario en escritura pública, aumentándola hasta la cantidad que indique el certificado catastral”, siempre que el aumento no exceda del 10 % de la medida original /Art. 13 Ley de Informaciones Posesorias La medida de las fincas inscritas con anterioridad al 23 de octubre de 1930, o sus segregaciones, podrán rectificarse sin necesidad de expediente, mediante escritura pública con la sola declaración del propietario o propietarios. (La fecha corresponde a la promulgación de la ley 20 que reformó el Código de Procedimientos Civiles de 1887 requiriendo un plano para toda información posesoria)",
+    "codigo_equivalente": "MAS DEL 10%",
+    "categoria": "Rectificación de cabida",
+    "fila_origen": 8,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "MAS_DEL_10"
+    ],
+    "resumenes_excel": [
+      "El área excede en más de un 10 % la medida inscrita."
+    ],
+    "descripcion_tecnica_excel": [
+      "El área indicada para el inmueble excede en más de un 10 % la medida original inscrita."
+    ],
+    "fundamentos_excel": [
+      "Ley del Catastro Nacional N.° 6545, artículo 22, relativo a la rectificación de cabida mediante escritura pública y al límite máximo del 10 %."
+    ],
+    "normas_excel": [
+      "Ley del Catastro Nacional N.° 6545"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "ACALRAR, SEGREGACION EXCEDE EL 10% PARA RECTIFICACION"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "AFCU",
+    "codigo_maestro": "AFCU",
+    "descripcion": "Acceso excepcional ubicado fuera del cuadrante urbano. No cumple con los requisitos establecidos",
+    "fundamento_legal": "ARTÍCULO 24. Ubicación del acceso excepcional para uso residencial.\nLos accesos excepcionales para uso residencial se permiten únicamente\ndentro de los cuadrantes urbanos y en las áreas de expansión de estos,\nlos cuales podrán ser delimitados por las municipalidades mediante el “Protocolo para la Delimitación de Cuadrantes Urbanos y sus Áreas de Expansión” del INVU, de conformidad con el Transitorio Segundo, Cuadrantes de la Ciudad, del presente reglamento.",
+    "codigo_equivalente": "AFCU",
+    "categoria": "Acceso excepcional",
+    "fila_origen": 9,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "AFCU"
+    ],
+    "resumenes_excel": [
+      "Acceso excepcional ubicado fuera del cuadrante urbano."
+    ],
+    "descripcion_tecnica_excel": [
+      "El acceso excepcional se ubica fuera del cuadrante urbano y no cumple los requisitos establecidos por la normativa aplicable."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 24, sobre la ubicación permitida del acceso excepcional para uso residencial."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "aliases_busqueda": [
+      "acceso excepcional",
+      "servidumbre de paso",
+      "servidumbre de paso acceso excepcional"
+    ],
+    "observaciones_excel": [
+      "Aceeso excepcional no procede"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "AP-FCU",
+    "codigo_maestro": "AP-FCU",
+    "descripcion": "El acceso al predio se encuentra fuera del cuadrante urbano y no cumple con lo establecido en la normativa vigente",
+    "fundamento_legal": "ARTÍCULO 16. Lote con frente menor a la norma en fraccionamientos\nsimples\nDentro de un cuadrante urbano o en un área previamente urbanizada\nse puede fraccionar un máximo de 4 lotes con frente menor a la norma\nen una misma finca, con el fin de aprovechar la infraestructura existente,\ncuando se cumplan las siguientes disposiciones:\n1) El fraccionamiento realizado dé como resultado 8 lotes, 4 en su\ninterior y 4 en el exterior, todos con frente a calle pública.",
+    "codigo_equivalente": "ACP-FCU",
+    "categoria": "Fraccionamiento simple",
+    "fila_origen": 10,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "ACP_FCU"
+    ],
+    "resumenes_excel": [
+      "Acceso al predio fuera del cuadrante urbano."
+    ],
+    "descripcion_tecnica_excel": [
+      "El acceso al predio se ubica fuera del cuadrante urbano y no cumple las condiciones establecidas en la normativa vigente."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 16, relativo a lotes con frente menor a la norma en fraccionamientos simples."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "aliases_busqueda": [
+      "acceso al predio",
+      "callejón de acceso",
+      "callejon de acceso",
+      "acceso al predio callejón de acceso"
+    ],
+    "observaciones_excel": [
+      "ACCESO AL PREDIO NO SE AJUSTA A LA  NORMATIVA VIGENTE"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "AP-NCN",
+    "codigo_maestro": "AP-NCN",
+    "descripcion": "El acceso al predio no cumple con la normativa vigente.",
+    "fundamento_legal": "ARTÍCULO 16. Lote con frente menor a la norma en fraccionamientos\nsimples\nDentro de un cuadrante urbano o en un área previamente urbanizada\nse puede fraccionar un máximo de 4 lotes con frente menor a la norma\nen una misma finca, con el fin de aprovechar la infraestructura existente,\n2) Los lotes interiores deben tener un frente a vía pública de entre\n3,00 m y 4,00 m.                                                                                                                                                                                             3) Los lotes interiores deben tener una franja de acceso que no debe\nexceder de 30,00 m de longitud para 3,00 m de ancho y de 40,00\nm para 4,00 m de ancho. Dicha franja se denominará “acceso del\npredio” y no debe ser computable para el cálculo del área mínima\ndel lote, ni puede construirse en ella a excepción de tapias.\nAdemás, en todo el largo de la misma,debe ser uniforme, unidireccional\ny finalizar en ángulos rectos.",
+    "codigo_equivalente": "ACP NC01",
+    "categoria": "Fraccionamiento simple",
+    "fila_origen": 11,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "ACP_NC01"
+    ],
+    "resumenes_excel": [
+      "El acceso incumple la norma y el resto no tiene el frente mínimo."
+    ],
+    "descripcion_tecnica_excel": [
+      "El acceso al predio no cumple la normativa vigente; además, el resto de finca no cuenta con el frente mínimo requerido."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 16: frente de 3,00 m a 4,00 m, longitud máxima de 30,00 m a 40,00 m según el ancho, uniformidad, unidireccionalidad y terminación en ángulo recto."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "aliases_busqueda": [
+      "acceso al predio",
+      "callejón de acceso",
+      "callejon de acceso",
+      "acceso al predio callejón de acceso"
+    ],
+    "observaciones_excel": [
+      "ACCESO AL PREDIO NO SE AJUSTA A LA  NORMATIVA VIGENTE"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "NCRFF",
+    "codigo_maestro": "NCRFF",
+    "descripcion": "El lote no cumple con la relación frente-fondo máxima permitida (7:1)",
+    "fundamento_legal": "ARTÍCULO 15. Dimensiones mínimas de predios en fraccionamientos\nsimples\nEn predios donde se pretenda realizar un fraccionamiento simple, el fondo\ndel predio a fraccionar y el fondo de los lotes resultantes no debe ser\nmayor de 7 veces el frente. En caso de quedar restos de fincas producto\nde este tipo de fraccionamiento, también se debe cumplir con dicha\nrelación.",
+    "codigo_equivalente": "NCRFF",
+    "categoria": "Dimensiones del predio",
+    "fila_origen": 12,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "NCRFF"
+    ],
+    "resumenes_excel": [
+      "El lote excede la relación máxima frente-fondo de 7:1."
+    ],
+    "descripcion_tecnica_excel": [
+      "El lote no cumple la relación máxima frente-fondo permitida de 7:1."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 15, sobre dimensiones mínimas y relación máxima frente-fondo de 7:1 en fraccionamientos simples y restos de finca."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "NO cumple con la normativa vigente_ Relacio frente fondo"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "MSD",
+    "codigo_maestro": "MSD",
+    "descripcion": "Se requiere presentar la minuta de traspaso sin defectos ni inconsistencias",
+    "fundamento_legal": "Requisito municipal",
+    "codigo_equivalente": "MSD",
+    "categoria": "Requisito municipal",
+    "fila_origen": 13,
+    "activo": true,
+    "alertas_fuente": [
+      "Fundamento legal breve; revisar antes de emitir resolución"
+    ],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "MSD"
+    ],
+    "resumenes_excel": [
+      "La minuta de traspaso presenta defectos o inconsistencias."
+    ],
+    "descripcion_tecnica_excel": [
+      "Deberá presentarse la minuta de traspaso libre de defectos, omisiones o inconsistencias."
+    ],
+    "fundamentos_excel": [
+      "normativa institucional"
+    ],
+    "normas_excel": [
+      "Normativa institucional"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "Debe presentar la Minuta si defectos"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "LCExc",
+    "codigo_maestro": "LCExc",
+    "descripcion": "La longitud de la calle indicada excede las dimensiones establecidas en el plano madre",
+    "fundamento_legal": "Reglamento a la ley de catastro :Artículo 69.-Planos previamente inscritos. El Catastro inscribirá un plano nuevo aunque contradiga uno o más planos inscritos cuando corrija errores de levantamiento, localización, situación, ubicación geográfica o datos del asiento registral. No podrá registrarse o modificarse ningún plano cuando haya sido inscrito o anotado otro que contradiga la conciliación jurídica.",
+    "codigo_equivalente": "LCE",
+    "categoria": "Concordancia catastral",
+    "fila_origen": 14,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "LCE"
+    ],
+    "resumenes_excel": [
+      "La longitud de calle excede la indicada en el plano madre."
+    ],
+    "descripcion_tecnica_excel": [
+      "La longitud de la calle indicada excede las dimensiones establecidas en el plano madre."
+    ],
+    "fundamentos_excel": [
+      "Reglamento a la Ley del Catastro Nacional, artículo 69, sobre planos previamente inscritos, corrección de errores y conciliación jurídica."
+    ],
+    "normas_excel": [
+      "Reglamento a la Ley del Catastro Nacional"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "ACCESO INDICADO DE CALE PUBLICA , NO CORRESPONDE."
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "Vis- INC",
+    "codigo_maestro": "Vis- INC",
+    "descripcion": "Se requiere presentar el alineamiento emitido por INCOFER",
+    "fundamento_legal": "indicar derecho de via, REGLAMENTO SOBRE LA DIMENSIÓNES DE LOS DERECHOS DE VÍA EN LOS FERROCARRILES NACIONALES DISPOSICIONES PRELIMINARES",
+    "codigo_equivalente": "ALI INC",
+    "categoria": "Alineamiento ferroviario",
+    "fila_origen": 15,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "ALI_INC"
+    ],
+    "resumenes_excel": [
+      "Falta el alineamiento oficial emitido por INCOFER."
+    ],
+    "descripcion_tecnica_excel": [
+      "Deberá aportarse el alineamiento oficial emitido por el Instituto Costarricense de Ferrocarriles (INCOFER)."
+    ],
+    "fundamentos_excel": [
+      "Reglamento sobre las dimensiones de los derechos de vía en los ferrocarriles nacionales y normativa técnica aplicable de INCOFER."
+    ],
+    "normas_excel": [
+      "Reglamento sobre derechos de vía ferroviarios"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "PRESNTR ALINEAMINTO DE INCOFER"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "DR-004",
+    "codigo_maestro": "DR-004",
+    "descripcion": "Se debe indicar en el plano lo establecido en la Directriz DRI-004-2023 sobre servidumbres",
+    "fundamento_legal": "1.3 Plano en posesión con acceso por servidumbre sobre finca inscrita o finca sin inscribir.\nAnálisis. Se puede dar en dos modalidades: a) la servidumbre que se indica en el plano es sobre finca inscrita; y b) se señala servidumbre sobre un bien que no está inscrito. En ambos casos procede la registración, amparado en lo dispuesto en los artículos 376 siguientes y concordantes del Código Civil y las potestades que se le conceden a la autoridad jurisdiccional derivadas del Principio de División de Poderes contemplado en los artículos 9 y 153 de la Constitución Política, sin embargo, para permitir el registro debe señalarse en los planos la siguiente nota técnica, para cada uno de los casos:\nServidumbre sobre finca inscrita. “El acceso de este inmueble es por la finca (se indica el número de finca).\nServidumbre sobre finca sin inscribir. “El acceso de este inmueble será concedido por la autoridad judicial”.",
+    "codigo_equivalente": "C-DR",
+    "categoria": "Servidumbres",
+    "fila_origen": 16,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "C_DR"
+    ],
+    "resumenes_excel": [
+      "Falta la información sobre servidumbres exigida por la DRI-004-2023."
+    ],
+    "descripcion_tecnica_excel": [
+      "El plano deberá incorporar la información exigida por la Directriz DRI-004-2023 en materia de servidumbres."
+    ],
+    "fundamentos_excel": [
+      "Directriz DRI-004-2023, apartado 1.3, sobre planos de posesión con acceso por servidumbre sobre finca inscrita o no inscrita."
+    ],
+    "normas_excel": [
+      "Directriz DRI-004-2023"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "SEGÚN TIPO DE ACCESO FALTA INDICAR NOTA CORRESPONDIENTE."
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "AN CP",
+    "codigo_maestro": "AN CP",
+    "descripcion": "El acceso indicado no corresponde a una calle pública",
+    "fundamento_legal": "43",
+    "codigo_equivalente": "AN CP",
+    "categoria": "Acceso vial",
+    "fila_origen": 17,
+    "activo": true,
+    "alertas_fuente": [
+      "Fundamento legal breve; revisar antes de emitir resolución"
+    ],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "AN_CP"
+    ],
+    "resumenes_excel": [
+      "El acceso indicado no corresponde a una calle pública."
+    ],
+    "descripcion_tecnica_excel": [
+      "El acceso indicado en el plano no corresponde a una calle pública."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 14, que exige acceso directo a vía pública para los lotes resultantes de un fraccionamiento simple."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "EL ACCESO NO ES CALLE PUBLICA"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "ADP",
+    "codigo_maestro": "ADP",
+    "descripcion": "El acceso (servidumbre) debe constar dentro de los polígonos del predio a segregar",
+    "fundamento_legal": "3) Este acceso constará dentro de los polígonos de los lotes resultantes\ny no serán computables para determinar el área mínima\nestablecida en el ARTÍCULO 20. Dimensiones mínimas de predios\nen fraccionamientos con fines urbanísticos.",
+    "codigo_equivalente": "ADP",
+    "categoria": "Servidumbres",
+    "fila_origen": 18,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "ADP"
+    ],
+    "resumenes_excel": [
+      "La servidumbre debe quedar dentro de los polígonos por segregar."
+    ],
+    "descripcion_tecnica_excel": [
+      "El acceso por servidumbre deberá quedar comprendido dentro de los polígonos del predio que se pretende segregar."
+    ],
+    "fundamentos_excel": [
+      "RFU, disposiciones sobre acceso excepcional y artículo 20, relativo a las dimensiones mínimas de predios en fraccionamientos con fines urbanísticos."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "EL ACCESO DEBE EST"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "FE(RFSS)",
+    "codigo_maestro": "FE(RFSS)",
+    "descripcion": "El resto de finca resultante presenta una condición de fondo enclavado, sin acceso directo a vía pública",
+    "fundamento_legal": "ARTÍCULO 14. Fraccionamientos simples\nLos fraccionamientos simples de predios, son permitidos siempre\nque los lotes resultantes del fraccionamiento cumplan las siguientes\ncondiciones:\n1) Estar ubicados dentro de un cuadrante urbano, o dentro de un\nárea previamente urbanizada que haya realizado la respectiva cesión\nde área para uso público.\n2) Tener acceso directo a vía pública.",
+    "codigo_equivalente": "FE / RFSS",
+    "categoria": "Fraccionamiento simple",
+    "fila_origen": 19,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "FE",
+      "RFSS"
+    ],
+    "resumenes_excel": [
+      "El resto de finca queda enclavado y sin acceso a vía pública.",
+      "El resto de finca queda sin salida a vía pública.",
+      "La segregación deja el resto de finca sin salida."
+    ],
+    "descripcion_tecnica_excel": [
+      "El resto de finca resultante queda en condición de fundo enclavado, sin acceso directo a vía pública.",
+      "El resto de finca resultante queda sin acceso directo a vía pública.",
+      "La segregación propuesta deja el resto de finca sin acceso directo a vía pública."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 14, que exige acceso directo a vía pública para los lotes resultantes del fraccionamiento simple.",
+      "RFU, artículo 14, relativo a las condiciones de los lotes resultantes y al acceso directo a vía pública.",
+      "RFU, artículo 14, que exige acceso directo a vía pública para los lotes y restos resultantes de un fraccionamiento simple."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "PRESENTA FONDO ENCLAVADO"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "VIS- INVU",
+    "codigo_maestro": "VIS- INVU",
+    "descripcion": "Se requiere presentar el visado de fraccionamiento mediante acceso excepcional, emitido por el INVU",
+    "fundamento_legal": "ARTÍCULO 27. Requisitos documentales para el visado de fraccionamientos mediante acceso excepcional para uso residencial.\nLa excepción del fraccionamiento mediante acceso excepcional para uso residencial debe contar, previo al visado municipal, con el visado emitido por el INVU.",
+    "codigo_equivalente": "VI-AE",
+    "categoria": "Acceso excepcional",
+    "fila_origen": 20,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "VI_AE"
+    ],
+    "resumenes_excel": [
+      "Falta el visado del INVU para el acceso excepcional."
+    ],
+    "descripcion_tecnica_excel": [
+      "Deberá aportarse el visado del INVU correspondiente al fraccionamiento mediante acceso excepcional."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 27, sobre requisitos documentales para el visado de fraccionamientos mediante acceso excepcional para uso residencial."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "aliases_busqueda": [
+      "visado invu",
+      "invu",
+      "visado acceso excepcional"
+    ],
+    "observaciones_excel": [
+      "Aportar Visado del INVU._ Acceso Excepcional"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "I-CC",
+    "codigo_maestro": "I-CC",
+    "descripcion": "Los colindantes indicados en el adverso del plano no coinciden con la realidad del inmueble. Se debe corregir la información",
+    "fundamento_legal": "Fundamento Jurídico:   Reglamento a la ley de Catastro / Artículo 34.-Información que se debe suministrar en el Cuerpo del plano de agrimensura.                                                                                        C. Colindantes: El nombre completo, número catastral de los colindantes o identificador único de inmueble en su caso. Cuando existen linderos naturales o artificiales, como ríos, canales, quebradas, caminos, carreteras, calles, etc., se consignará el nombre de los mismos; en el caso de los caminos, se expresará su destino. En áreas urbanas, el número de avenidas y calles.",
+    "codigo_equivalente": "I-CC",
+    "categoria": "Información catastral",
+    "fila_origen": 21,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "I_CC"
+    ],
+    "resumenes_excel": [
+      "Los colindantes del plano no coinciden con la realidad del inmueble."
+    ],
+    "descripcion_tecnica_excel": [
+      "Los colindantes consignados en el plano no coinciden con la realidad física o registral del inmueble; deberá corregirse la información."
+    ],
+    "fundamentos_excel": [
+      "Reglamento a la Ley del Catastro Nacional, artículo 34, inciso relativo a colindantes y linderos naturales o artificiales."
+    ],
+    "normas_excel": [
+      "Reglamento a la Ley del Catastro Nacional"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e"
+  },
+  {
+    "codigo": "ANP-T-USP",
+    "codigo_maestro": "ANP-T-USP",
+    "descripcion": "El acceso al inmueble es por servidumbre, ya que la vía indicada no es calle pública",
+    "fundamento_legal": "Regalmento general del registro Inmoviliario (Art. 136 inc. b.4, RGRI).. Planos para usucapión con acceso por servidumbre sobre finca inscrita, se debe indicar \"El acceso de este inmueble es por la finca\" e indicar el número de finca (Art. 136 inc. b.4, RGRI).",
+    "codigo_equivalente": "AP-IP",
+    "categoria": "Servidumbres",
+    "fila_origen": 22,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "AP_IP"
+    ],
+    "resumenes_excel": [
+      "El acceso es por servidumbre y no por calle pública."
+    ],
+    "descripcion_tecnica_excel": [
+      "El acceso al inmueble se realiza por servidumbre, debido a que la vía indicada no corresponde a una calle pública."
+    ],
+    "fundamentos_excel": [
+      "Reglamento General del Registro Inmobiliario, artículo 136, inciso b.4, sobre planos para usucapión con acceso por servidumbre."
+    ],
+    "normas_excel": [
+      "Reglamento General del Registro Inmobiliario"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "aliases_busqueda": [
+      "servidumbre de paso",
+      "acceso por servidumbre"
+    ],
+    "observaciones_excel": [
+      "EL ACCESO INDICADO NO ESTAS CONTEMPLADO COMO PUBLICO."
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "CQ01",
+    "codigo_maestro": "CQ01",
+    "descripcion": "El croquis de ubicación se encuentra incompleto o no cumple con los requisitos documentales establecidos",
+    "fundamento_legal": "Fundamento Jurídico: Reglamento de Fraccionamiento y Urbanizaciones \nARTÍCULO 18. Requisitos documentales para fraccionamiento simple \nLa municipalidad debe visar los fraccionamientos simples, y verificar que la finca madre donde se requiere realizar dicho fraccionamiento se encuentre ubicada en el cuadrante urbano, o dentro de un área pre¬viamente urbanizada que haya cedido el área pública correspondiente. \nPara su respectivo visado, el fraccionador debe presentar ante la muni¬cipalidad al menos los siguientes requisitos documentales: \n1) Plano catastrado certificado de la finca madre o certificado catas¬tral. Para el caso de reunión de predios se debe indicar el plano catastrado que genera la reunión. \n2) Plano georreferenciado al sistema oficial de coordenadas vigente, firmado por el profesional responsable, miembro activo del CIT, conforme a los requisitos establecidos por el Reglamento a la Ley del Catastro Nacional; este plano debe contener el diseño del conjunto de todos los lotes resultantes del fraccionamiento sim¬ple, acotar frente-fondo de estos y ancho del derecho de vía de la calle pública. Además…",
+    "codigo_equivalente": "CQ01",
+    "categoria": "Documentación técnica",
+    "fila_origen": 23,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "CQ01"
+    ],
+    "resumenes_excel": [
+      "El croquis de ubicación está incompleto o incumple requisitos."
+    ],
+    "descripcion_tecnica_excel": [
+      "El croquis de ubicación está incompleto o no cumple los requisitos documentales establecidos."
+    ],
+    "fundamentos_excel": [
+      "RFU, artículo 18, sobre requisitos documentales del fraccionamiento simple, plano georreferenciado, diseño del conjunto, dimensiones y derecho de vía."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "Corregir corouis_ imcompleto"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "CNP-SP-IP",
+    "codigo_maestro": "CNP-SP-IP",
+    "descripcion": "ACESO NO ES CALLE , CORRESPONDE A ES SERVIDUMBRE DE PASO",
+    "fundamento_legal": "REGLAMENTO GENERAL DEL REGISTRO INMOBILIARIO: Artículo 136.- Servidumbres en los planos de agrimensura. En los planos de agrimensura cuyos inmuebles soporten servidumbres constituidas en los asientos registrales o materializados en el terreno, se deberán cumplir los siguientes requisitos: 2. En el caso de planos de posesión con acceso por servidumbre sobre finca no inscrita; se deberá indicar: \"El acceso de este inmueble será concedido por la autoridad judicial\".",
+    "codigo_equivalente": "CNP_SP_IP",
+    "categoria": "Servidumbres",
+    "fila_origen": 24,
+    "activo": true,
+    "alertas_fuente": [
+      "Código equivalente no indicado en la fuente"
+    ],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "CNP_SP_IP"
+    ],
+    "resumenes_excel": [
+      "El acceso corresponde a una servidumbre de paso."
+    ],
+    "descripcion_tecnica_excel": [
+      "El acceso indicado no corresponde a una calle pública, sino a una servidumbre de paso."
+    ],
+    "fundamentos_excel": [
+      "Reglamento General del Registro Inmobiliario, artículo 136, sobre servidumbres en planos de agrimensura y acceso por finca no inscrita."
+    ],
+    "normas_excel": [
+      "Reglamento General del Registro Inmobiliario"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "aliases_busqueda": [
+      "servidumbre de paso",
+      "acceso por servidumbre",
+      "servidumbre de paso acceso excepcional"
+    ],
+    "observaciones_excel": [
+      "El acceso indicado no esta normado como calle publica"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "RF. NRFF / RF_NCFM",
+    "codigo_maestro": "RF. NRFF / RF_NCFM",
+    "descripcion": "El resto de finca no cumple con la relación frente-fondo establecida, ni con el frente mínimo requerido",
+    "fundamento_legal": "ARTÍCULO 15. Dimensiones mínimas de predios en fraccionamientos\nsimples\nEn predios donde se pretenda realizar un fraccionamiento simple, el fondo\ndel predio a fraccionar y el fondo de los lotes resultantes no debe ser\nmayor de 7 veces el frente. En caso de quedar restos de fincas producto\nde este tipo de fraccionamiento, también se debe cumplir con dicha\nrelación.",
+    "codigo_equivalente": "RF.NRFF",
+    "categoria": "Dimensiones del predio",
+    "fila_origen": 25,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "codigos_fuente_excel": [
+      "RF_NRFF_RF_NCFM"
+    ],
+    "resumenes_excel": [
+      "El resto incumple la relación 7:1 y el frente mínimo."
+    ],
+    "descripcion_tecnica_excel": [
+      "El resto de finca no cumple la relación máxima frente-fondo ni el frente mínimo exigido por la normativa aplicable."
+    ],
+    "fundamentos_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones (RFU), artículo 15: el fondo del predio, de los lotes resultantes y de los restos de finca no debe ser mayor de siete veces el frente; además, el frente mínimo de los lotes resultantes debe ser de 6,00 m."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "observaciones_excel": [
+      "NO CUMPLE CONLA NORMATIVA VIGENTE_ REALCION FRENTE FONDO"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "ACDT",
+    "codigo_maestro": "ACDT",
+    "descripcion": "ANCHO DE CALLE DIFIERE DEL TITULO",
+    "fundamento_legal": "43",
+    "codigo_equivalente": null,
+    "categoria": "Concordancia registral",
+    "fila_origen": 26,
+    "activo": true,
+    "alertas_fuente": [
+      "Código equivalente no indicado en la fuente",
+      "Fundamento legal breve; revisar antes de emitir resolución"
+    ],
+    "archivo_fuente": "BASE_DE_DATOS.xlsx",
+    "sha256_fuente": "eeb558089eff269dd299e7e21b821e8e701e0bd89b7414dbee1a9cb794d089a5",
+    "observaciones_excel": [
+      "EL ANCHO DE CALLE  DIFIERE DEL TITULO"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "EXCEDE_10_PERMITIDO",
+    "codigo_maestro": "EXCEDE_10_PERMITIDO",
+    "descripcion": "Conforme a la Ley de Informaciones Posesorias, el área indicada excede el 10 % permitido para la rectificación de cabida.",
+    "fundamento_legal": "Ley de Informaciones Posesorias, artículo 13, sobre rectificación de medida de fincas inscritas con anterioridad al 23 de octubre de 1930.",
+    "codigo_equivalente": "EXCEDE_10_PERMITIDO",
+    "categoria": "Rectificación de cabida",
+    "fila_origen_excel": 15,
+    "activo": true,
+    "alertas_fuente": [],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "codigos_fuente_excel": [
+      "EXCEDE_10_PERMITIDO"
+    ],
+    "resumenes_excel": [
+      "La rectificación de cabida excede el 10 % permitido."
+    ],
+    "descripcion_tecnica_excel": [
+      "Conforme a la Ley de Informaciones Posesorias, el área indicada excede el 10 % permitido para la rectificación de cabida."
+    ],
+    "fundamentos_excel": [
+      "Ley de Informaciones Posesorias, artículo 13, sobre rectificación de medida de fincas inscritas con anterioridad al 23 de octubre de 1930."
+    ],
+    "normas_excel": [
+      "Ley de Informaciones Posesorias"
+    ],
+    "observaciones_excel": [
+      "NO cumple con la normativa vigente_ Relacio frente fondo"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  },
+  {
+    "codigo": "NCFM",
+    "codigo_maestro": "NCFM",
+    "descripcion": "Código sin descripción en la fuente.",
+    "fundamento_legal": "Fundamento legal pendiente de definir.",
+    "codigo_equivalente": "NCFM",
+    "categoria": "Dimensiones del predio",
+    "fila_origen_excel": 24,
+    "activo": true,
+    "alertas_fuente": [
+      "La fuente Excel indica que la descripción/fundamento están pendientes de completar; no se inventó contenido."
+    ],
+    "archivo_fuente_actualizacion": "datos para reicio aprobacion o rechazo(1).xlsx",
+    "sha256_fuente_actualizacion": "bc4a188817e9773157caa1744d8815c54ee514c5a2564a85ea695c91477d8b4e",
+    "codigos_fuente_excel": [
+      "NCFM"
+    ],
+    "resumenes_excel": [
+      "Código sin descripción en la fuente."
+    ],
+    "descripcion_tecnica_excel": [
+      "Descripción pendiente de completar en Hoja1."
+    ],
+    "fundamentos_excel": [
+      "Fundamento legal pendiente de definir."
+    ],
+    "normas_excel": [
+      "Reglamento de Fraccionamiento y Urbanizaciones"
+    ],
+    "observaciones_excel": [
+      "NO CUMPLE CONLA NORMATIVA VIGENTE_ frente minimo"
+    ],
+    "archivo_fuente_observaciones": "datos para reicio aprobacion o rechazo(2).xlsx",
+    "sha256_fuente_observaciones": "11f79331e3d89d916d58578f2f0b9b2ee1f1a6b317098339fa5d2248f9633202"
+  }
+]

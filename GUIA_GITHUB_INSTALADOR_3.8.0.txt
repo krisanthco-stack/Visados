@@ -1,0 +1,12 @@
+C-VISADOS 3.8.0 — GUÍA DE INSTALADOR SIN CMD
+
+1. Cree o use un repositorio PÚBLICO de GitHub desde la interfaz web de GitHub.
+2. Suba el contenido completo de este repositorio conservando la carpeta .github/workflows.
+3. En GitHub abra Actions > "C-VISADOS Windows Installer" > Run workflow para generar un instalador de prueba.
+4. Para una versión oficial, cree desde la interfaz web de GitHub una Release/tag con nombre v3.8.0.
+5. GitHub Actions compilará automáticamente C-VISADOS y adjuntará C-VISADOS-Setup-3.8.0-x64.exe a la Release.
+6. El usuario descarga el .exe, lo abre y sigue el asistente gráfico. No usa CMD ni navegador para ejecutar C-VISADOS.
+7. La compilación realizada dentro de GitHub graba automáticamente el usuario/repositorio en el canal de actualizaciones.
+8. Desde ese momento C-VISADOS busca nuevas Releases al iniciar y también desde el botón "Actualizaciones".
+
+Nota de Windows: si el instalador no tiene certificado de firma de código, Windows SmartScreen puede mostrar una advertencia de editor desconocido. La firma digital requiere un certificado de firma de código y es independiente del funcionamiento del programa.
