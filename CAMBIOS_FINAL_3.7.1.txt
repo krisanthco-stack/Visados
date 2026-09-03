@@ -1,9 +1,0 @@
-C-VISADOS 3.7.1 — LECTOR WEB ROBUSTO
-
-- Mantiene sin cambios la máquina de estados, vínculos Metro y machotes oficiales.
-- Reconoce trámites VMSDC con espacios, guiones y barras.
-- Reconoce fechas numéricas y fechas con nombre de mes en español.
-- El backend conserva separaciones estructurales del HTML para evitar que un campo absorba al siguiente.
-- La fusión de datos sigue completando solo campos vacíos y ahora registra conflictos para revisión sin sobrescribir.
-- El visor/lector web rechaza enlaces externos: solo HTTPS metro.sarapiqui.go.cr.
-- Backend y PWA versionados a 3.7.1.
